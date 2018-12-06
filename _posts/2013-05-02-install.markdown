@@ -29,12 +29,15 @@ permalink: install
 ### *2.* У вікні ти побачиш інформацію про версію твоєї ОС.
 Якщо номер версії починається з 10.6, 10.7, 10.8, 10.9, 10.10, 10.11 чи 10.12, то ця інструкція для тебе.
 
+### *2.* In the window you will find the version of your operating system.
+If your version number starts with 10.6, 10.7, 10.8, 10.9, 10.10, 10.11 or higher this guide is for you. If it&#8217;s something else, we can setup your machine at the event.
 
 ![About this Mac dialog](/images/2.png "About this Mac dialog")
 
 ### *3a.* Для версії OS X 10.9 та вище:
 
 Якщо у тебе версія 10.9, 10.10, 10.11 чи 10.12,то тобі необхідно установити homebrew та rbenv
+If your version number starts with 10.9, 10.10, 10.11 or higher, follow these steps. We are installing homebrew and rbenv.
 
 #### *3a1.* Установи Command line tools:
 
@@ -52,8 +55,17 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 {% highlight sh %}
 brew update
+{% endhighlight %}
+
+{% highlight sh %}
 brew install rbenv
+{% endhighlight %}
+
+{% highlight sh %}
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+{% endhighlight %}
+
+{% highlight sh %}
 source ~/.bash_profile
 {% endhighlight %}
 
@@ -70,6 +82,9 @@ rbenv install 2.4.2
 
 {% highlight sh %}
 brew install curl-ca-bundle
+{% endhighlight %}
+
+{% highlight sh %}
 cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'`
 {% endhighlight %}
 
@@ -107,6 +122,8 @@ gem update rails --no-document
 
 Якщо ти використовуєш Mac OS X 10.7 чи старішу версію, ти можеш використати інший текстовий редактор [Sublime Text 2](http://www.sublimetext.com/2).
 
+If you are using Mac OS X 10.7 or older versions, you can use another editor [Sublime Text 2](http://www.sublimetext.com/2). Just to make sure that you're not mixing up using your terminal or text-editor: change the theme of your Sublime text-editor, choosing one of the following: "iPlastic", "Slush &amp; Poppies", or "Zenburnesque".
+
 ### *5.* Оновлення веб оглядача
 
 Відкрий [whatbrowser.org](http://whatbrowser.org) та онови свій веб оглядач, якщо у тебе не остання версія.
@@ -117,7 +134,13 @@ gem update rails --no-document
 
 {% highlight sh %}
 rails new myapp
+{% endhighlight %}
+
+{% highlight sh %}
 cd myapp
+{% endhighlight %}
+
+{% highlight sh %}
 rails server
 {% endhighlight %}
 
@@ -125,6 +148,8 @@ rails server
 Це все! Тепер у тебе все необхідне для створення свого першого додатку на Ruby on Rails ;)
 
 **Ментори:** Рекомендуємо згенерувати scaffold та перевірити чи все працює.
+
+**Coach:** We recommend to verify by using the scaffold command and inputting data with the generated page with coaches to ensure everything is working. Also: remove the test app `myapp` to make super sure no-one is working in the wrong folder, following the steps of the workshop.
 
 <hr />
 
@@ -141,6 +166,14 @@ rails server
 Відкрий `Command Prompt with Ruby and Rails`.
 Клікни правою кнопкою мишки на рядок заголовку командного рядка та обери "Опції" ("Properties")
 далі перейди до вкладки "Експерименти" ("experimental") та обери "Активувати нові клавіатурні скорочення Ctrl" ("Enable new Ctrl key shortcuts")
+
+Open `Command Prompt with Ruby and Rails`.
+Right-click on the command prompt’s title bar, and choose "Properties".
+Navigate to the "options" tab, and check "Enable Ctrl key shortcuts".
+(If you don't find it, but have an "experimental" tab,
+navigate there and check "Enable new Ctrl key shortcuts" option.
+In this case, you may need to check the "Enable experimental console
+features" option first.)
 
 Для інших версій Windows:
 
@@ -211,7 +244,13 @@ gem -v
 
 {% highlight sh %}
 gem install --local c:\\rubygems-update-2.6.11.gem
+{% endhighlight %}
+
+{% highlight sh %}
 update_rubygems --no-document
+{% endhighlight %}
+
+{% highlight sh %}
 gem uninstall rubygems-update -x
 {% endhighlight %}
 
@@ -258,6 +297,8 @@ gem -v
 
 Якщо ви використовуєте Windows Vista чи старіші версії, ви можете використати інший редактор [Sublime Text 2](http://www.sublimetext.com/2).
 
+If you are using Windows Vista or older versions, you can use another editor [Sublime Text 2](http://www.sublimetext.com/2). Just to make sure that you're not mixing up using your command prompt or text-editor: change the theme of your Sublime text-editor, choosing one of the following: "iPlastic", "Slush &amp; Poppies", or "Zenburnesque".
+
 ### *3.* Онови свій браузер
 
 Відкрий [whatbrowser.org](http://whatbrowser.org) та онови свій браузер, якщо у тебе не остання версія.
@@ -281,14 +322,23 @@ node --version
 
 {% highlight sh %}
 rails new myapp
+{% endhighlight %}
+
+{% highlight sh %}
 cd myapp
+{% endhighlight %}
+
+{% highlight sh %}
 rails server
 {% endhighlight %}
 
 Відкрий `http://localhost:3000` у своєму веб оглядачі. Ти повинна побачити сторінку 'Yay! You're on Rails!'.
 Це все! Тепер у тебе все необхідне для створення свого першого додатку на Ruby on Rails ;)
 
+
 **Ментори:** Рекомендуємо згенерувати scaffold та перевірити чи все працює.
+
+**Coach:** We recommend to verify by using the scaffold command and inputting data with the generated page with coaches to ensure everything is working. Also: remove the test app `myapp` to make super sure no-one is working in the wrong folder, following the steps of the workshop.
 
 <hr />
 
@@ -302,6 +352,9 @@ rails server
 
 {% highlight sh %}
 sudo apt-get install curl
+{% endhighlight %}
+
+{% highlight sh %}
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
@@ -324,7 +377,7 @@ rails new myapp
 
 Для воркшопу ми рекомендуємо текстовий редактор Sublime Text.
 
-* [Download Sublime Text and install it](http://www.sublimetext.com/2)
+* [Download Sublime Text and install it](http://www.sublimetext.com/2). Just to make sure that you're not mixing up using your terminal or text-editor: change the theme of your Sublime text-editor, choosing one of the following: "iPlastic", "Slush &amp; Poppies", or "Zenburnesque".
 
 
 ### *3.* Оновлення браузера
@@ -337,7 +390,13 @@ rails new myapp
 
 {% highlight sh %}
 rails new myapp
+{% endhighlight %}
+
+{% highlight sh %}
 cd myapp
+{% endhighlight %}
+
+{% highlight sh %}
 rails server
 {% endhighlight %}
 
@@ -345,6 +404,8 @@ rails server
 Це все! Тепер у тебе все необхідне для створення свого першого додатку на Ruby on Rails ;)
 
 **Ментори:** Рекомендуємо згенерувати scaffold та перевірити чи все працює.
+
+**Coach:** We recommend to verify by using the scaffold command and inputting data with the generated page with coaches to ensure everything is working. Also: remove the test app `myapp` to make super sure no-one is working in the wrong folder, following the steps of the workshop.
 
 <hr />
 
@@ -371,7 +432,11 @@ rails server
 
 Перейди [codenvy.io](https://codenvy.io) та зареєструйся безкоштовно.
 
-![](/images/codenvy/create-account.jpg)
+Go to [codenvy.io](https://codenvy.io) and signup for free.
+You will need to confirm your email and then fill in your details.
+
+
+![](/images/codenvy/codenvy-create-one.png)
 
 ### *3.* Налаштування робочого середовища Ruby on Rails
 
@@ -380,6 +445,12 @@ rails server
  "Create workspace".
 
 ![](/images/codenvy/create-workspace-dashboard.png)
+
+The Ruby on Rails Workspace has all the software we need for the workshop already preinstalled.
+To create a workspace, log into [codenvy.io](https://codenvy.io) and click on 'Dashboard'.
+If no workspace has been created yet, the 'New Workspace' view is displayed.
+
+![](/images/codenvy/codenvy-dashboard-create-workspace.png)
 
 На сторінці "New workspace":
 
@@ -402,7 +473,23 @@ rails server
 * Якщо посібник просить тебе запустити rails server із  `rails server` чи `rails s`, додай `-b 0.0.0.0`
 до цієї команди (`bundle exec rails server -b 0.0.0.0`)
 * Якщо посібник просить тебе запустити браузер, наприклад `http://localhost:3000`, слідуй наступним інструкціям:
+* Give the workspace a name of your choice. In the example this is "railsgirls".
+* From "Select Stack", select "Quick Start", scroll down and select "Rails"
+* Now click on 'Create' to create the workspace (it takes a moment for the process to finish)
 
+![](/images/codenvy/codenvy-rails-stack.png)
+
+* Codenvy creates a folder '/projects' during initialization,
+in which you can later put your code.
+
+![](/images/codenvy/codenvy-workspace-layout.png)
+
+### *4.* Find and restart your workspace
+
+* If you've just created your project, you can probably skip these steps - they're good to know if you login to Codenvy again later
+* If you haven't used your workspace or projects in a while, they might have been shutdown due to inactivity.
+  You will notice an empty circle displayed next to the workspace name.
+s
   1. Клікни на вкладку "Commands"
   2. Клікни два рази на "run"
   3. У полі "Command Line" введи наступне `cd ${current.project.path} && bundle exec rails s -b 0.0.0.0`
@@ -414,6 +501,18 @@ rails server
 
   ![](/images/codenvy/runtime.png)
 
+### *5.* Coding with your project
+
+![](/images/codenvy/codenvy-layout-with-project.png)
+
+* On the left hand side, you find a file browser where you can navigate your directories and file
+* In the middle, you find the editor where you can modify your files
+* At the bottom, you find the terminal where you can run commands
+* Everything you need is right here in you browser window - you do not need to start an editor or terminal anywhere else
+* If you are following a guide or tutorial, use the commands for Linux even if you are on a Windows computer - your operating system does not matter, since all commands are run on your project's machine in the cloud, which is running Linux
+* If a guide or tutorial asks you to run a rails command that contains `rails` or `rake`, prepend `bundle exec` to this command, e. g. `bundle exec rails db:migrate`. Exception: the `rails new` command is not prefixed.
+* If a guide or tutorial asks you to start the rails server with `rails server` or `rails s`, append `-b 0.0.0.0` to this command so that you run `rails server -b 0.0.0.0`
+* If a guide or tutorial asks you to point your browser to something like `http://localhost:3000`, follow these instructions instead:
 
   ![](/images/codenvy/preview.png)
 
@@ -424,3 +523,6 @@ rails server
 
   * У цьому випадку клікни на його ім'я, це запустить процес рестарту середовища (може зайняти деякий час). Після запуску робоче серидовище автоматично відкриється.
   * Після перезапуску середовища, тобі знову потрібно виконати команду `bundle` у робочій папці Rails проекту.
+    For example, if the tutorial wants you to visit `http://localhost:3000/posts`, you would open the URL `http://node3.codenvy.io:33079/posts` instead.
+
+![](/images/codenvy/codenvy-app-url.png)

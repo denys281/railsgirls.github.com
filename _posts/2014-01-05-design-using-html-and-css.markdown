@@ -4,7 +4,7 @@ title: Add design to your App with HTML and CSS
 permalink: design-html-css
 ---
 
-## *1.*Дизайн заголовка
+## *1.* Дизайн заголовка
 
 Додайте рядки в кінець файлу `app/assets/stylesheets/application.css`:
 
@@ -32,7 +32,7 @@ permalink: design-html-css
 
 **Тренер:** поясніть про 4-и стани посилання
 
-## *2.*Дизайн таблиці
+## *2.* Дизайн таблиці
 
 Ми використовуємо twitter [Bootstrap](http://getbootstrap.com/) для дизайну нашої таблиці. Знайдіть ці рядки в файлі `app/views/ideas/index.html.erb` і замініть:
 
@@ -66,10 +66,9 @@ permalink: design-html-css
 
 Спробуйте додати фоновий стиль використовуючи `background-image`, посилання на патерни [http://subtlepatterns.com/](http://subtlepatterns.com/)
 
-## *3.*Додавання стилів для підвалу
+## *3.* Додавання стилів для підвалу
 
 Додайте рядки в кінець файлу `app/assets/stylesheets/application.css`:
-
 
 {% highlight css %}
 footer {
@@ -80,7 +79,7 @@ footer {
 
 спробуйте додати більше різних стилів до підвалу.
 
-## *4.*Додавання стилів для кнопки
+## *4.* Додавання стилів для кнопки
 
 Відкрийте [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new) і знайдіть кнопку Create Idea.
 
