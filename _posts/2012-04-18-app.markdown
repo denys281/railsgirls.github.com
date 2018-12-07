@@ -40,7 +40,7 @@ some code
 <p> Наприклад, якщо ти бачиш зображення терміналу біля виділеного тексту, як в прикладі вище, то варто скопіювати цей код у термінал чи командну стрічку.</p>
 </div>
 
-Need some reminders along the way? Check out this [handy cheatsheet for Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
+Потрібні підказки протягом воркшопу? Подивись [cheatsheet для Ruby, Rails, console і т.п.](http://www.pragtob.info/rails-beginner-cheatsheet/)
 
 ### Увага!
 
@@ -285,10 +285,7 @@ th { border-bottom: 1px solid #DDD; }
 Now make sure you saved your files and refresh the browser to see what was changed. Nothing changed? It might be that you're not connected to the wifi anymore.
 You can change the HTML & CSS further, adding to `app/assets/stylesheets/application.css`.
 
-**Coach:** Talk a little about CSS and layouts.
->>>>>>> upstream/master
-
-**Ментор:** Розкажи трохи про CSS.
+**Ментор:** Розкажи про CSS та layouts.
 
 ## *4.* Додаємо зображення на сторіку.
 
